@@ -10,11 +10,11 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
        FileRepository repository = new FileRepository() {
-            @Override
-            public void deleteById(Long userId) {
-
-            }
-        };
+//            @Override
+//            public void deleteById(Long userId) {
+//
+//            }
+      };
 
 
         User user1 = new User();
@@ -38,6 +38,10 @@ public class Main {
             System.out.println(user);
         }
         repository.deleteById(1l);
+        System.out.println("Обновленный список пользователей:");
+        for (User user : repository.allUsers()) {
+            System.out.println(user);
+        }
 
 
 
