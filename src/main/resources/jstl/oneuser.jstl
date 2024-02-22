@@ -1,0 +1,38 @@
+<c:choose>
+  <c:when test="${not empty users}">
+    <c:forEach var="user" items="${users}">
+      <c:if test="${user.id == your_id}">
+        ${user.name}
+      </c:if>
+    </c:forEach>
+  </c:when>
+  <c:otherwise>
+    <p>Пользователь не найден</p>
+  </c:otherwise>
+</c:choose>
+
+<c:choose>
+  <c:when test="${not empty users}">
+    <c:forEach var="user" items="${users}">
+      ${user.name}
+    </c:forEach>
+  </c:when>
+  <c:otherwise>
+    <p>Пользователи не найдены</p>
+  </c:otherwise>
+</c:choose>
+
+
+
+<c:choose>
+  <c:when test="${not empty users}">
+    <c:forEach var="user" items="${users}">
+      <c:if test="${user.name == 'Коля'}">
+        ${user.name}
+      </c:if>
+    </c:forEach>
+  </c:when>
+  <c:otherwise>
+    <p>Пользователи не найдены</p>
+  </c:otherwise>
+</c:choose>

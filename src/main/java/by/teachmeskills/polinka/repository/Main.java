@@ -26,7 +26,7 @@ public class Main {
 
         User user2 = new User();
         user2.setId(2l);
-        user2.setName("Петр");
+        user2.setName("Коля");
         user2.setSurname("Петров");
         user2.setLogin("petrov");
         user2.setPassword("password2");

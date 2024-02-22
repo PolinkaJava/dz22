@@ -7,7 +7,7 @@ import java.util.Collection;
 import java.io.*;
 import java.util.*;
 
-import static jdk.internal.org.jline.utils.InfoCmp.Capability.user1;
+//import static jdk.internal.org.jline.utils.InfoCmp.Capability.user1;
 
 public class FileRepository implements ShopRepository {
     private final String filePath = "resources/user.ser";

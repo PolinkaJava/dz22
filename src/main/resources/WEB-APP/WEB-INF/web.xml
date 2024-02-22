@@ -1,0 +1,23 @@
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" version="6.0" metadata-complete="true">
+
+    <servlet>
+        <servlet-name>Hello</servlet-name>
+        <servlet-class>by.teachmeskills.polinka.controller.RegisterServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Hello</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Display</servlet-name>
+        <servlet-class>by.teachmeskills.polinka.controller.DisplayServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Display</servlet-name>
+        <url-pattern>/display</url-pattern>
+    </servlet-mapping>
+
+</web-app>

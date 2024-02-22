@@ -3,7 +3,7 @@ package by.teachmeskills.polinka.repository;
 
 import by.teachmeskills.polinka.entity.User;
 import java.io.*;
-import java.util.Collection;
+        import java.util.Collection;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,7 +27,7 @@ public class FileRepository implements ShopRepository {
     @Override
     public void deleteById(Long userId) {
         users.removeIf(user -> user.getId().equals(userId));
-      serializeUsers();
+        serializeUsers();
     }
 
 

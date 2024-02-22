@@ -3,10 +3,13 @@
 package by.teachmeskills.polinka.entity;
 
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Objects;
 
 public class User implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 3298162958912921687L;
     private Long id;
     private String name;
     private String surname;
