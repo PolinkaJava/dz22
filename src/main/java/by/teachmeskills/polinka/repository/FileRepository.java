@@ -3,13 +3,12 @@ package by.teachmeskills.polinka.repository;
 
 import by.teachmeskills.polinka.entity.User;
 import java.io.*;
-        import java.util.Collection;
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class FileRepository implements ShopRepository {
-    private final String filePath = "user.ser";
+public class FileRepository implements UserRepository {
+    private final String filePath = "C:\\Users\\user\\Desktop\\Maven\\project2\\src\\main\\resources\\Users";
     private List<User> users;
 
     public FileRepository() {
@@ -32,8 +31,20 @@ public class FileRepository implements ShopRepository {
 
 
     @Override
-    public Collection<User> allUsers() {
+    public List<User> allUsers() {
         return users;
+    }
+
+    public User authentication(String login, String password){
+        for (User user: users) {
+            if (user.getLogin().equals(login) && user.getPassword().equals(password)) {
+                return user;
+            }
+        }
+        throw new RuntimeException("Пользователь с таким логином не найдены");
+    }
+    public long userIdGenerator(){
+        return users.size()+1;
     }
     private void serializeUsers() {
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(filePath))) {
@@ -56,6 +67,10 @@ public class FileRepository implements ShopRepository {
         }
         return new ArrayList<>();
     }
+
+
+
+
 }
 
 

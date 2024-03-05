@@ -4,7 +4,7 @@ import by.teachmeskills.polinka.entity.User;
 
 import java.util.Collection;
 
-public interface ShopRepository {
+public interface UserRepository {
     public  void  add(User user);
 
     void deleteById(Long userId);
